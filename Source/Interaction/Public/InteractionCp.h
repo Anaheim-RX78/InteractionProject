@@ -6,6 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "InteractionCp.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FBasicInteractionDelegate);
 
 UCLASS( ClassGroup=(Interaction), meta=(BlueprintSpawnableComponent) )
 class INTERACTION_API UInteractionCp : public UActorComponent
@@ -30,6 +31,10 @@ public:
 	FString GetInteractionLabel() const;
 
 	void Interact();
+
+	UPROPERTY(BlueprintAssignable)
+	FBasicInteractionDelegate OnBasicInteractionDelegate;
+
 
 	virtual void OnInteractionStart();
 		

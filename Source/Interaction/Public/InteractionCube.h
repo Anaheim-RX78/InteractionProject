@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "InteractionCube.generated.h"
 
+
 UCLASS()
 class INTERACTION_API AInteractionCube : public AActor
 {
@@ -22,5 +23,5 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	
 };
